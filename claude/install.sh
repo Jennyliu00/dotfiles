@@ -111,8 +111,7 @@ if [ ! -f "$CLAUDE_DIR/mcp-servers.json" ]; then
     if [ -f "$DOTFILES_DIR/mcp-servers.template.json" ]; then
         cp "$DOTFILES_DIR/mcp-servers.template.json" "$CLAUDE_DIR/mcp-servers.json"
         echo "  ✓ MCP template copied to ~/.claude/mcp-servers.json"
-        echo "  ⚠️  IMPORTANT: Edit this file to add your OAuth credentials!"
-        echo "  ⚠️  See ~/dotfiles/claude/MCP_SETUP.md for instructions"
+        echo "  ⚠️  Run 'claude mcp' to authorize Atlassian access"
     fi
 else
     echo "→ MCP servers already configured"
@@ -137,6 +136,5 @@ echo "  osx-notifications@datadog-claude-plugins - macOS notifications"
 echo "  permissions@mat-brown-contrib - Permission guard"
 echo ""
 echo "MCP Setup:"
-echo "  Template: ~/.claude/mcp-servers.json"
-echo "  Guide: ~/dotfiles/claude/MCP_SETUP.md"
-echo "  Next: Edit mcp-servers.json with your OAuth credentials, then run 'claude mcp'"
+echo "  Config: ~/.claude/mcp-servers.json"
+echo "  Next: Run 'claude mcp' to authorize Atlassian access"
