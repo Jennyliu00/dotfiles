@@ -1,0 +1,32 @@
+# Sensitive configuration files
+config.json
+mcp-servers.json
+.credentials.json
+
+# Conversation history and user data
+projects/
+history.jsonl
+*.jsonl
+
+# Temporary and cache files
+*.log
+*.swp
+*.tmp
+.DS_Store
+cache/
+paste-cache/
+session-env/
+shell-snapshots/
+debug/
+file-history/
+telemetry/
+
+# Stats and internal data
+stats-cache.json
+policy-limits.json
+settings.local.json
+
+# Tasks and TODOs (may contain work context)
+tasks/
+todos/
+plans/
