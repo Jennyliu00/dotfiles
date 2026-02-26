@@ -84,7 +84,8 @@
       "mcp__atlassian-mcp-server__getJiraIssueRemoteIssueLinks",
       "Skill(keybindings-help)",
       "Skill(jira-ticket)",
-      "Skill(senior-swe)"
+      "Skill(senior-swe)",
+      "Skill(self-improvement)"
     ],
     "defaultMode": "acceptEdits",
     "additionalDirectories": [
