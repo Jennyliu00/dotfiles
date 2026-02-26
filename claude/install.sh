@@ -76,6 +76,16 @@ else
     echo "  ⚠️  No permissions.json found in dotfiles"
 fi
 
+# Install permissions guard plugin
+echo "→ Installing permissions guard plugin..."
+if command -v claude &> /dev/null; then
+    claude plugin marketplace add DataDog/mat-brown-claude-plugins 2>/dev/null || echo "  ⚠️  Marketplace already added"
+    claude plugin install permissions@mat-brown-contrib 2>/dev/null || echo "  ⚠️  Plugin already installed"
+    echo "  ✓ Permissions guard plugin installed"
+else
+    echo "  ⚠️  Claude not found, skipping plugin installation"
+fi
+
 echo ""
 echo "✅ Claude dotfiles installed!"
 echo ""
@@ -85,6 +95,9 @@ echo "  ~/.claude/keybindings.json → ~/dotfiles/claude/keybindings.json"
 echo ""
 echo "Permissions merged into:"
 echo "  ~/.claude/settings.json"
+echo ""
+echo "Plugins installed:"
+echo "  permissions@mat-brown-contrib - Permission guard"
 echo ""
 echo "Note: MCP servers must be configured separately in ~/.claude/mcp-servers.json"
 echo "      (This file contains sensitive tokens and is not in dotfiles)"

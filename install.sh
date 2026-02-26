@@ -53,7 +53,7 @@ done
 if ! command -v claude &> /dev/null; then
     echo ""
     echo "🤖 Installing Claude Code..."
-    brew install --cask anthropic/claude/claude
+    curl -fsSL https://claude.ai/install.sh | bash
 else
     echo ""
     echo "✓ Claude Code already installed"
@@ -96,5 +96,5 @@ echo ""
 echo "Next steps:"
 echo "  1. Restart your shell or run: source ~/.bashrc (or ~/.zshrc)"
 echo "  2. Configure Claude MCP servers: claude mcp"
-echo "  3. Test Claude skills: /mytask"
+echo "  3. Test Claude skills: /jira-ticket"
 echo ""
