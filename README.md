@@ -54,6 +54,7 @@ dotfiles/
 
 - **`/jira-ticket`** - Complete Jira ticket implementation with multi-agent workflow
 - **`/write-ticket`** - Enhance Jira ticket with accurate context for implementation
+- **`/review-pr`** - Comprehensive multi-agent PR review with senior engineer perspective
 - **`/senior-swe`** - Senior engineer guidance on Go, Zoltron, systems, code review
 - **`/self-improvement`** - Reflect and update skills based on learnings
 

@@ -84,6 +84,7 @@
       "mcp__atlassian-mcp-server__getJiraIssueRemoteIssueLinks",
       "Skill(keybindings-help)",
       "Skill(jira-ticket)",
+      "Skill(review-pr)",
       "Skill(senior-swe)",
       "Skill(self-improvement)",
       "Skill(write-ticket)"

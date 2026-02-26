@@ -28,6 +28,13 @@ You MUST also update `claude/README.md` to reflect those changes. Keep documenta
 - Requires: clear acceptance criteria, technical context, reference implementations
 - If ticket lacks context, run `/write-ticket` first
 
+**`/review-pr 12345`**
+- Use to get comprehensive code review of a pull request
+- Multi-agent analysis from multiple perspectives (security, performance, testing, Go idioms)
+- Outputs: high-level summary, critical issues, important feedback, suggestions, nits
+- Looks for bugs, security vulnerabilities, bad practices, and code quality issues
+- References senior-swe knowledge base for best practices
+
 **`/senior-swe`**
 - Use for expert guidance on Go programming, Zoltron codebase, systems design
 - Code review feedback and best practices

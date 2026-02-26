@@ -11,7 +11,7 @@ cd ~/dotfiles
 
 ## What's Included
 
-- **Skills** - Custom task automation (`/jira-ticket`, `/write-ticket`, `/senior-swe`, `/self-improvement`)
+- **Skills** - Custom task automation (`/jira-ticket`, `/write-ticket`, `/review-pr`, `/senior-swe`, `/self-improvement`)
 - **Keybindings** - Keyboard shortcuts
 - **Permissions** - Pre-configured tool permissions
 - **Documentation** - See `CLAUDE.md` for full details
@@ -31,6 +31,7 @@ claude/
 └── skills/
     ├── jira-ticket/       # Multi-agent workflow for ticket implementation
     ├── write-ticket/      # Enhance Jira tickets with context
+    ├── review-pr/         # Comprehensive PR review
     ├── senior-swe/        # Senior engineer guidance
     └── self-improvement/  # Skill self-improvement system
 ```
@@ -48,6 +49,12 @@ Analyzes ticket, adds context, acceptance criteria, and references.
 /jira-ticket GRACE-1234
 ```
 Complete multi-agent workflow from analysis to draft PR.
+
+### Review a Pull Request
+```bash
+/review-pr 12345
+```
+Multi-agent comprehensive code review looking for bugs, security issues, and code quality.
 
 ### Get Senior Engineer Guidance
 ```bash
