@@ -55,12 +55,36 @@ else
     echo "  ⚠️  No keybindings.json found in dotfiles"
 fi
 
+# Merge permissions into settings.json
+if [ -f "$DOTFILES_DIR/permissions.json" ]; then
+    echo "→ Setting up permissions..."
+
+    if [ -f "$CLAUDE_DIR/settings.json" ]; then
+        # Backup existing settings
+        cp "$CLAUDE_DIR/settings.json" "$CLAUDE_DIR/settings.json.backup.$(date +%Y%m%d-%H%M%S)"
+
+        # Merge permissions using jq
+        jq -s '.[0] * .[1]' "$CLAUDE_DIR/settings.json" "$DOTFILES_DIR/permissions.json" > "$CLAUDE_DIR/settings.json.tmp"
+        mv "$CLAUDE_DIR/settings.json.tmp" "$CLAUDE_DIR/settings.json"
+        echo "  ✓ Merged permissions into settings.json"
+    else
+        # No existing settings, just copy permissions structure
+        cp "$DOTFILES_DIR/permissions.json" "$CLAUDE_DIR/settings.json"
+        echo "  ✓ Created settings.json with permissions"
+    fi
+else
+    echo "  ⚠️  No permissions.json found in dotfiles"
+fi
+
 echo ""
 echo "✅ Claude dotfiles installed!"
 echo ""
 echo "Symlinks created:"
 echo "  ~/.claude/skills → ~/dotfiles/claude/skills"
 echo "  ~/.claude/keybindings.json → ~/dotfiles/claude/keybindings.json"
+echo ""
+echo "Permissions merged into:"
+echo "  ~/.claude/settings.json"
 echo ""
 echo "Note: MCP servers must be configured separately in ~/.claude/mcp-servers.json"
 echo "      (This file contains sensitive tokens and is not in dotfiles)"

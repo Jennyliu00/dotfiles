@@ -11,21 +11,25 @@ cd ~/dotfiles/claude
 
 ## What's Included
 
-- **Skills** - Custom task automation (`/mytask`)
+- **Skills** - Custom task automation (`/jira-ticket`)
 - **Keybindings** - Keyboard shortcuts
+- **Permissions** - Pre-configured tool permissions
 - **Documentation** - See `CLAUDE.md` for full details
+- **Work** - Work-specific configurations
 
 ## Files
 
 ```
 claude/
-├── CLAUDE.md              # Full documentation
+├── CLAUDE.md              # Global Claude instructions
 ├── README.md              # This file
 ├── install.sh             # Setup script
 ├── .gitignore             # Exclude sensitive files
 ├── keybindings.json       # Keyboard shortcuts
+├── permissions.json       # Permission settings
+├── work/                  # Work-specific configs
 └── skills/
-    └── mytask/
+    └── jira-ticket/
         └── SKILL.md       # Task loader with multi-agent orchestration
 ```
 
@@ -33,7 +37,7 @@ claude/
 
 Start a task:
 ```bash
-/mytask <task-id, page-id, or confluence-url>
+/jira-ticket <task-id, page-id, or confluence-url>
 ```
 
 The skill will:

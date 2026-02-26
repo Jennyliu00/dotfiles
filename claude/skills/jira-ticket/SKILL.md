@@ -1,5 +1,5 @@
 ---
-name: mytask
+name: jira-ticket
 description: Load a task from personal Confluence with Jira ticket context. Use when starting work on a task, need task context, or want to resume previous work.
 argument-hint: "[task-id, page-id, or confluence-url]"
 context: fork
