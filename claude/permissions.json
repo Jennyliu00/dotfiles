@@ -85,7 +85,8 @@
       "Skill(keybindings-help)",
       "Skill(jira-ticket)",
       "Skill(senior-swe)",
-      "Skill(self-improvement)"
+      "Skill(self-improvement)",
+      "Skill(write-ticket)"
     ],
     "defaultMode": "acceptEdits",
     "additionalDirectories": [

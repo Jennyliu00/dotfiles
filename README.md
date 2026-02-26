@@ -53,6 +53,7 @@ dotfiles/
 ## Skills
 
 - **`/jira-ticket`** - Complete Jira ticket implementation with multi-agent workflow
+- **`/write-ticket`** - Enhance Jira ticket with accurate context for implementation
 - **`/senior-swe`** - Senior engineer guidance on Go, Zoltron, systems, code review
 - **`/self-improvement`** - Reflect and update skills based on learnings
 

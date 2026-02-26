@@ -11,7 +11,7 @@ cd ~/dotfiles/claude
 
 ## What's Included
 
-- **Skills** - Custom task automation (`/jira-ticket`)
+- **Skills** - Custom task automation (`/jira-ticket`, `/write-ticket`, `/senior-swe`, `/self-improvement`)
 - **Keybindings** - Keyboard shortcuts
 - **Permissions** - Pre-configured tool permissions
 - **Documentation** - See `CLAUDE.md` for full details
@@ -35,15 +35,28 @@ claude/
 
 ## Usage
 
-Start a task:
+### Enhance a Jira Ticket
 ```bash
-/jira-ticket <task-id, page-id, or confluence-url>
+/write-ticket GRACE-1234
 ```
+Analyzes ticket, adds context, acceptance criteria, and references.
 
-The skill will:
-1. Load task from Confluence
-2. Fetch Jira ticket details
-3. Orchestrate agents to implement the task
-4. Create PR automatically
+### Implement a Jira Ticket
+```bash
+/jira-ticket GRACE-1234
+```
+Complete multi-agent workflow from analysis to draft PR.
+
+### Get Senior Engineer Guidance
+```bash
+/senior-swe
+```
+Expert advice on Go, Zoltron, systems design, code review.
+
+### Improve Skills
+```bash
+/self-improvement
+```
+Reflect on learnings and update skills.
 
 See `CLAUDE.md` for complete documentation.
