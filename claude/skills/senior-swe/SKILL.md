@@ -139,8 +139,32 @@ When reviewing or writing database code:
 
 ## References
 
+### Codebase & Domain Knowledge
+- **Zoltron Reference**: `~/dotfiles/claude/skills/senior-swe/references/zoltron.md`
+  - Architecture patterns, repository/handler patterns, Frames integration
+  - Common patterns for handlers, services, repositories, testing
+  - APIs, deployment, performance considerations
 - **Zoltron codebase**: `~/go/src/github.com/DataDog/dd-source/domains/aaa/apps/zoltron`
 - **Context Platform docs**: [Context Platform Service Document](https://datadoghq.atlassian.net/wiki/spaces/FRAMES/pages/5147922742/Context+Platform+Service+Document)
+
+### Best Practices & Guidelines
+- **Coding Best Practices**: `~/dotfiles/claude/skills/senior-swe/references/coding.md`
+  - Go programming patterns, SOLID principles, clean code
+  - Error handling, concurrency, testing, performance
+  - Security best practices, code quality tools
+- **Systems & Infrastructure**: `~/dotfiles/claude/skills/senior-swe/references/system.md`
+  - Distributed systems fundamentals (CAP theorem, consistency models)
+  - Scalability patterns, caching strategies, load balancing
+  - Database systems, observability, infrastructure as code
+- **Code Review**: `~/dotfiles/claude/skills/senior-swe/references/review.md`
+  - What makes a good reviewer, review goals and checklist
+  - How to provide effective feedback, comment categories
+  - Review workflow, tools and automation
+- **Addressing PR Feedback**: `~/dotfiles/claude/skills/senior-swe/references/addressing-feedback.md`
+  - Systematic workflow for processing PR reviews
+  - Prioritization, commit guidelines, response patterns
+
+### External Resources
 - **Go best practices**: Effective Go, Go proverbs, idiomatic Go patterns
 - **Database patterns**: PostgreSQL documentation, cursor usage, transaction management
 
