@@ -14,7 +14,7 @@ This guide explains how to set up Atlassian MCP servers for Claude Code.
 1. Go to https://developer.atlassian.com/console/myapps/
 2. Click "Create" → "OAuth 2.0 integration"
 3. Fill in the details:
-   - **App name**: Claude MCP (Personal) / Claude MCP (Work)
+   - **App name**: Claude MCP (Work)
    - **Redirect URL**: `http://localhost:3000/oauth/callback`
 4. Click "Create"
 5. Note down:
@@ -49,9 +49,8 @@ Run Claude MCP authorization:
 claude mcp
 ```
 
-Follow the prompts to authorize both:
-1. `atlassian-mcp-server-personal` (for jennyliu887.atlassian.net)
-2. `atlassian-mcp-server` (for datadoghq.atlassian.net)
+Follow the prompts to authorize:
+- `atlassian-mcp-server` (for datadoghq.atlassian.net)
 
 ### 4. Verify Setup
 
@@ -61,15 +60,9 @@ Test the connection:
 claude mcp list-servers
 ```
 
-You should see both Atlassian MCP servers listed and connected.
+You should see the Atlassian MCP server listed and connected.
 
 ## Configuration Details
-
-### Personal Confluence (atlassian-mcp-server-personal)
-- **Cloud ID**: `2cd08c26-b6ca-47ed-8c8b-74a153f0bc80`
-- **Instance**: https://jennyliu887.atlassian.net
-- **Space**: "Dawg" (KB, space ID: 98536)
-- **Access**: Only "Dawg" space, never "Life" (JL) or "carmelodd123"
 
 ### Work Jira/Confluence (atlassian-mcp-server)
 - **Cloud ID**: `66c05bee-f5ff-4718-b6fc-81351e5ef659`

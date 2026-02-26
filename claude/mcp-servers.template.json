@@ -1,19 +1,5 @@
 {
   "mcpServers": {
-    "atlassian-mcp-server-personal": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-atlassian"
-      ],
-      "env": {
-        "ATLASSIAN_CLOUD_ID": "2cd08c26-b6ca-47ed-8c8b-74a153f0bc80",
-        "ATLASSIAN_INSTANCE_URL": "https://jennyliu887.atlassian.net",
-        "ATLASSIAN_OAUTH_CLIENT_ID": "<YOUR_OAUTH_CLIENT_ID>",
-        "ATLASSIAN_OAUTH_CLIENT_SECRET": "<YOUR_OAUTH_CLIENT_SECRET>",
-        "ATLASSIAN_OAUTH_REDIRECT_URI": "http://localhost:3000/oauth/callback"
-      }
-    },
     "atlassian-mcp-server": {
       "command": "npx",
       "args": [
