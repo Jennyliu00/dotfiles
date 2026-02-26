@@ -5,7 +5,7 @@ Personal Claude Code configuration files.
 ## Quick Start
 
 ```bash
-cd ~/dotfiles/claude
+cd ~/dotfiles
 ./install.sh
 ```
 
@@ -23,14 +23,16 @@ cd ~/dotfiles/claude
 claude/
 ├── CLAUDE.md              # Global Claude instructions
 ├── README.md              # This file
-├── install.sh             # Setup script
 ├── .gitignore             # Exclude sensitive files
 ├── keybindings.json       # Keyboard shortcuts
 ├── permissions.json       # Permission settings
+├── mcp-servers.template.json  # MCP server config template
 ├── work/                  # Work-specific configs
 └── skills/
-    └── jira-ticket/
-        └── SKILL.md       # Task loader with multi-agent orchestration
+    ├── jira-ticket/       # Multi-agent workflow for ticket implementation
+    ├── write-ticket/      # Enhance Jira tickets with context
+    ├── senior-swe/        # Senior engineer guidance
+    └── self-improvement/  # Skill self-improvement system
 ```
 
 ## Usage
