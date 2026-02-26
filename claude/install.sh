@@ -76,12 +76,31 @@ else
     echo "  ⚠️  No permissions.json found in dotfiles"
 fi
 
-# Install permissions guard plugin
-echo "→ Installing permissions guard plugin..."
+# Install Claude plugins
+echo "→ Installing Claude plugins..."
 if command -v claude &> /dev/null; then
-    claude plugin marketplace add DataDog/mat-brown-claude-plugins 2>/dev/null || echo "  ⚠️  Marketplace already added"
-    claude plugin install permissions@mat-brown-contrib 2>/dev/null || echo "  ⚠️  Plugin already installed"
-    echo "  ✓ Permissions guard plugin installed"
+    # Add marketplaces
+    echo "  → Adding plugin marketplaces..."
+    claude plugin marketplace add anthropics/claude-plugins-official 2>/dev/null || true
+    claude plugin marketplace add DataDog/mat-brown-claude-plugins 2>/dev/null || true
+    claude plugin marketplace add DataDog/claude-marketplace 2>/dev/null || true
+
+    # Install official Anthropic plugins
+    echo "  → Installing Anthropic plugins..."
+    claude plugin install commit-commands@claude-plugins-official 2>/dev/null || true
+    claude plugin install feature-dev@claude-plugins-official 2>/dev/null || true
+    claude plugin install pr-review-toolkit@claude-plugins-official 2>/dev/null || true
+
+    # Install DataDog plugins
+    echo "  → Installing DataDog plugins..."
+    claude plugin install dd@datadog-claude-plugins 2>/dev/null || true
+    claude plugin install osx-notifications@datadog-claude-plugins 2>/dev/null || true
+
+    # Install permissions guard
+    echo "  → Installing permissions guard..."
+    claude plugin install permissions@mat-brown-contrib 2>/dev/null || true
+
+    echo "  ✓ All plugins installed"
 else
     echo "  ⚠️  Claude not found, skipping plugin installation"
 fi
@@ -97,6 +116,11 @@ echo "Permissions merged into:"
 echo "  ~/.claude/settings.json"
 echo ""
 echo "Plugins installed:"
+echo "  commit-commands@claude-plugins-official - Git commit helpers"
+echo "  feature-dev@claude-plugins-official - Feature development workflow"
+echo "  pr-review-toolkit@claude-plugins-official - PR review tools"
+echo "  dd@datadog-claude-plugins - DataDog integration"
+echo "  osx-notifications@datadog-claude-plugins - macOS notifications"
 echo "  permissions@mat-brown-contrib - Permission guard"
 echo ""
 echo "Note: MCP servers must be configured separately in ~/.claude/mcp-servers.json"
