@@ -11,7 +11,7 @@ cd ~/dotfiles
 
 ## What's Included
 
-- **Skills** - Custom task automation (`/jira-ticket`, `/write-ticket`, `/review-pr`, `/senior-swe`, `/self-improvement`)
+- **Skills** - Custom task automation (`/deploy-to-staging`, `/jira-ticket`, `/write-ticket`, `/review-pr`, `/senior-swe`, `/self-improvement`)
 - **Keybindings** - Keyboard shortcuts
 - **Permissions** - Pre-configured tool permissions
 - **Documentation** - See `CLAUDE.md` for full details
@@ -29,6 +29,7 @@ claude/
 ├── mcp-servers.template.json  # MCP server config template
 ├── work/                  # Work-specific configs
 └── skills/
+    ├── deploy-to-staging/ # Deploy to zoltron staging with conflict resolution
     ├── jira-ticket/       # Multi-agent workflow for ticket implementation
     ├── write-ticket/      # Enhance Jira tickets with context
     ├── review-pr/         # Comprehensive PR review
@@ -37,6 +38,12 @@ claude/
 ```
 
 ## Usage
+
+### Deploy to Staging
+```bash
+/deploy-to-staging 365040
+```
+Integrates PR into zoltron/staging with automatic conflict resolution.
 
 ### Enhance a Jira Ticket
 ```bash

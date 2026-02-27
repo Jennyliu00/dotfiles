@@ -52,6 +52,7 @@ dotfiles/
 
 ## Skills
 
+- **`/deploy-to-staging`** - Deploy changes to zoltron staging and resolve integration conflicts
 - **`/jira-ticket`** - Complete Jira ticket implementation with multi-agent workflow
 - **`/write-ticket`** - Enhance Jira ticket with accurate context for implementation
 - **`/review-pr`** - Comprehensive multi-agent PR review with senior engineer perspective

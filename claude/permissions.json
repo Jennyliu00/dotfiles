@@ -82,6 +82,7 @@
       "mcp__atlassian-mcp-server__searchJiraIssuesUsingJql",
       "mcp__atlassian-mcp-server__editJiraIssue",
       "mcp__atlassian-mcp-server__getJiraIssueRemoteIssueLinks",
+      "Skill(deploy-to-staging)",
       "Skill(keybindings-help)",
       "Skill(jira-ticket)",
       "Skill(review-pr)",
